@@ -1,0 +1,16 @@
+@import '../../assets/styles/variables.scss', '../../assets/styles/function.scss', '../../assets/styles/mixin.scss';
+
+header {
+  height: 100px;
+  padding: 30px 40px;
+  position: relative;
+  z-index: 99;
+  @include small {
+    height: 30px;
+    padding: 10px 15px;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

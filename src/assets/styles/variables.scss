@@ -1,0 +1,24 @@
+// Font Family
+$ff-main: "AvenirNext", sans-serif;
+
+// color
+$black: #000000;
+$violet: #6c50d1;
+$white: #ffffff;
+$bg-gray: #e9eef2;
+$gray: #58595d;
+$green: #4cb97f;
+$green-2: #7fcfa5;
+
+// z-index
+$z-popup: 13;
+$z-popup-double: 15;
+
+// screen
+$screen: (
+  large: 1440px,
+  medium: 1024px,
+  small: 896px,
+  phone: 480px,
+  iphone5: 320px
+);

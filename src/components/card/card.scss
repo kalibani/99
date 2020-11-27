@@ -1,0 +1,132 @@
+@import '../../assets/styles/variables.scss', '../../assets/styles/function.scss', '../../assets/styles/mixin.scss';
+
+.card {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  padding: 5px;
+  min-height: 420px;
+  min-width: 340px;
+
+  @include small {
+    min-width: 280px !important;
+    min-height: 420px;
+  }
+
+  @include iphone5 {
+    min-width: 280px !important;
+  }
+
+  .card-content {
+    .card-img {
+      border: 1px solid $white;
+      img {
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
+
+    .card-caption {
+      padding: 10px;
+      text-align: left;
+      .card-caption-top {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -31px;
+        .card-caption-top-left {
+          display: inline-block;
+          .card-sale-badge {
+            background: $bg-gray;
+            color: $gray;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 3px;
+            width: 40px;
+            margin-right: 10px;
+            text-align: center;
+            display: inline-block;
+            font-weight: 500;
+          }
+          .card-nego-badge {
+            background: $green;
+            color: $white;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 16px;
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+          }
+        }
+
+        .card-caption-top-right {
+          position: relative;
+          top: 7px;
+          cursor: pointer;
+        }
+      }
+
+      .card-caption-midle {
+        margin-top: 10px;
+        .price {
+          color: $gray;
+          font-size: 16px;
+          font-weight: bold;
+          span {
+            color: #868688;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .card-caption-bottom {
+        margin-top: -10px;
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            display: inline;
+            font-size: 12px;
+            margin-right: 20px;
+
+            @include small {
+              margin-right: 10px !important;
+            }
+          
+            @include iphone5 {
+              margin-right: 5px !important;
+              font-size: 10px;
+
+            }
+            img {
+              width: 14px;
+              height: 14px;
+              vertical-align: middle;
+              margin-right: 5px;
+            }
+            span {
+              font-weight: 600;
+              color: $gray;
+            }
+          }
+        }
+      }
+
+      .card-caption-map {
+        margin-top: 10px;
+        .address {
+          font-size: 16px;
+          font-weight: 600;
+          color: $gray;
+        }
+        p {
+          font-size: 12px;
+        }
+
+      }
+      .empty-space {
+        height: 101px;
+      }
+    }
+  }
+}
