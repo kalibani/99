@@ -9,24 +9,32 @@ const Modal = ({
   show,
   children
 }) => {
-  const [isModalDone, setModalDone] = useState(false);
+  const [isModalActive, setModalActive] = useState(false);
+  const [isModalShow, setModalShow] = useState(false);
 
-  const handleModalDone = () => {
-    setTimeout(() => {
-      setModalDone(show);
-    }, 100);
+  const handleToggleModal = () => {
+    if (show) {
+      setModalShow(show);
+      setTimeout(() => {
+        setModalActive(show);
+      }, 50);
+    } else {
+      setModalActive(show);
+      setTimeout(() => {
+        setModalShow(show);
+      }, 500);
+    }
   };
 
   useEffect(() => {
-    handleModalDone();
+    handleToggleModal();
   }, [show]);
 
   return (
     <>
       {
-        show && (
-
-        <div className={`modal ${variant} ${show ? 'modal-scale-enter' : 'modal-scale-leave'} ${isModalDone ? 'modal-scale-enter-active' : 'modal-scale-leave-active'} `}>
+        isModalShow && (
+        <div className={`modal ${variant} ${show ? 'modal-scale-enter' : 'modal-scale-leave'} ${isModalActive ? 'modal-scale-enter-active' : 'modal-scale-leave-active'} `}>
           <div className="modal-content">
             <div className="modal-body">
               {children}

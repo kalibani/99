@@ -3,7 +3,8 @@
 .container {
 
   &.modal-show {
-    opacity: 0.5;
+    opacity: 0.8;
+    // transition: opacity 250ms ease 0ms;
   }
   /*Responsive */
 	.col-1 {
